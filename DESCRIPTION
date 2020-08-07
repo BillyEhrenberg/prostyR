@@ -26,5 +26,10 @@ Imports:
     clipr,
     rlang,
     utils,
+<<<<<<< HEAD
     janitor
+=======
+    xml2,
+    rvest
+>>>>>>> d92e0ba3d57df2921315df73f73b723c951fe327
 VignetteBuilder: knitr
