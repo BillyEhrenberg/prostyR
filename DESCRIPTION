@@ -25,5 +25,7 @@ Imports:
     dbplyr,
     clipr,
     rlang,
-    utils
+    utils,
+    xml2,
+    rvest
 VignetteBuilder: knitr

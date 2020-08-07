@@ -35,3 +35,39 @@ pu <- function(df,...){
 round_half_up <- function(dbl){
 	if_else(dbl %% 1 == .5, ceiling(dbl), round(dbl))
 }
+
+
+#' Check if your R version is up to date
+#'
+#' Function to check current R version against the latest release from CRAN
+#'
+#' @export
+checkRVersion <- function(){
+
+	current_version <- (version$major) %>% paste(version$minor,sep='.')
+
+	url <- 'https://cran.r-project.org/bin/macosx/'
+
+	page <- url %>%
+		xml2::read_html(.)
+
+	version_node <- page %>%
+		rvest::html_nodes('body > table:nth-child(9) > tr > td > a') %>% .[1]
+
+
+	version_url <- html_attr(version_node,'href') %>%
+		paste0('https://cran.r-project.org/bin/macosx/',.)
+
+
+	latest_version <- version_node %>%
+		rvest::html_text(.) %>%
+		stringr::str_remove_all('R-|\\.pkg')
+
+	if(current_version == latest_version){
+		print("You're up to date! Cran-tastic.")
+	} else {
+		warning(paste0('Please update R to version ', latest_version,'. You can find the files at ',
+									 url, ' or you can download ',latest_version, ' directly from ', version_url, '.'))
+	}
+
+}
