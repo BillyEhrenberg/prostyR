@@ -56,5 +56,8 @@ This will write documentation for all your funcs
 devtools::document()
 
 ```
+```{r}
+devtools::load_all()
+```
 
 

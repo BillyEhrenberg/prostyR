@@ -51,19 +51,27 @@ checkRVersion <- function(){
 	page <- url %>%
 		xml2::read_html(.)
 
-	version_node <- page %>%
-		rvest::html_nodes('body > table:nth-child(9) > tr > td > a') %>% .[1]
+	hrefs <- page %>%
+		rvest::html_nodes('a') %>%
+		rvest::html_attr('href') %>%
+		.[grepl('^R-',.)]
 
 
-	version_url <- rvest::html_attr(version_node,'href') %>%
-		paste0('https://cran.r-project.org/bin/macosx/',.)
+	pkg_nums <- hrefs %>%
+		stringr::str_extract('-[0-9]\\.[0-9]\\.[0-9]') %>%
+		stringr::str_extract_all('[0-9]') %>%
+		purrr::map_dbl(~stringr::str_c(unlist(.x),collapse = '') %>% as.numeric)
+
+	latest_version <- hrefs[which(pkg_nums == max(pkg_nums, na.rm = T))]
 
 
-	latest_version <- version_node %>%
-		rvest::html_text(.) %>%
+	version_url <- paste0('https://cran.r-project.org/bin/macosx/',latest_version)
+
+
+	latest_version_num <- latest_version %>%
 		stringr::str_remove_all('R-|\\.pkg')
 
-	if(current_version == latest_version){
+	if(current_version == latest_version_num){
 		print("You're up to date! Cran-tastic.")
 	} else {
 		warning(paste0('Please update R to version ', latest_version,'. You can find the files at ',
