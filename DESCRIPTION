@@ -1,0 +1,21 @@
+Package: packageTitle
+Title: Package Title 
+Version: 0.1.0
+Author: Data Science
+Maintainer: Data Science <data.science@ft.com>
+Description: The ftb2cltv package provides functions and models 
+    for forecasting B2C acquisitions, cancellations and calculating LTV.
+Depends: R (>= 2.10), 
+    Rcpp
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/Financial-Times/ds-package-template
+BugReports: https://github.com/Financial-Times/ds-package-template/issues
+Suggests: 
+    testthat,
+    roxygen2
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
+Imports: 
+VignetteBuilder: knitr
