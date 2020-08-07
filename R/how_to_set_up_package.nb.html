@@ -1773,19 +1773,14 @@ roxygen2::roxygenise()
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG51c2V0aGlzOjp1c2VfcGlwZSgpICNzZXQgdXAgbWFncml0dHIgJT4lXG51c2V0aGlzOjp1c2VfcGFja2FnZSgncHVycnInKVxudXNldGhpczo6dXNlX3BhY2thZ2UoJ3N0cmluZ3InKVxudXNldGhpczo6dXNlX3BhY2thZ2UoJ21hZ3JpdHRyJylcbnVzZXRoaXM6OnVzZV9wYWNrYWdlKCdkcGx5cicpXG51c2V0aGlzOjp1c2VfcGFja2FnZSgnZGJwbHlyJylcbnVzZXRoaXM6OnVzZV9wYWNrYWdlKCdjbGlwcicpXG51c2V0aGlzOjp1c2VfcGFja2FnZSgncmxhbmcnKVxudXNldGhpczo6dXNlX3BhY2thZ2UoJ3V0aWxzJylcblxuYGBgIn0= -->
-<pre class="r"><code>
-usethis::use_pipe() #set up magrittr %&gt;%
-usethis::use_package(&#39;purrr&#39;)
-usethis::use_package(&#39;stringr&#39;)
-usethis::use_package(&#39;magrittr&#39;)
-usethis::use_package(&#39;dplyr&#39;)
-usethis::use_package(&#39;dbplyr&#39;)
-usethis::use_package(&#39;clipr&#39;)
-usethis::use_package(&#39;rlang&#39;)
-usethis::use_package(&#39;utils&#39;)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudXNldGhpczo6dXNlX3BhY2thZ2UoJ2phbml0b3InKVxuXG5gYGAifQ== -->
+<pre class="r"><code>usethis::use_package(&#39;janitor&#39;)
 </code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoi4pyTIEFkZGluZyAnamFuaXRvcicgdG8gSW1wb3J0cyBmaWVsZCBpbiBERVNDUklQVElPTlxu4pePIFJlZmVyIHRvIGZ1bmN0aW9ucyB3aXRoIGBqYW5pdG9yOjpmdW4oKWBcbiJ9 -->
+<pre><code>✓ Adding &#39;janitor&#39; to Imports field in DESCRIPTION
+● Refer to functions with `janitor::fun()`</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>In order to run the next step, your functions should be documented with the spacing/documentation layout used in the function scripts. eg</p>
@@ -1811,29 +1806,30 @@ my_func &lt;- function(x){
 <pre class="r"><code>
 devtools::document()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiVXBkYXRpbmcgcHJvc3R5UiBkb2N1bWVudGF0aW9uXG5Mb2FkaW5nIHByb3N0eVJcbiJ9 -->
+<!-- rnb-output-begin eyJkYXRhIjoiVXBkYXRpbmcgcHJvc3R5UiBkb2N1bWVudGF0aW9uXG5Mb2FkaW5nIHByb3N0eVJcbk9iamVjdHMgbGlzdGVkIGFzIGV4cG9ydHMsIGJ1dCBub3QgcHJlc2VudCBpbiBuYW1lc3BhY2U6IHJvd1RvQ29sTmFtZXNcbiJ9 -->
 <pre><code>Updating prostyR documentation
-Loading prostyR</code></pre>
+Loading prostyR
+Objects listed as exports, but not present in namespace: rowToColNames</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiV3JpdGluZyBOQU1FU1BBQ0VcbldyaXRpbmcgTkFNRVNQQUNFXG5Xcml0aW5nIHJvdW5kX2hhbGZfdXAuUmRcbiJ9 -->
+<!-- rnb-output-begin eyJkYXRhIjoiV3JpdGluZyBOQU1FU1BBQ0VcbldyaXRpbmcgTkFNRVNQQUNFXG5Xcml0aW5nIHJvd190b19jb2xfbmFtZXMuUmRcbiJ9 -->
 <pre><code>Writing NAMESPACE
 Writing NAMESPACE
-Writing round_half_up.Rd</code></pre>
+Writing row_to_col_names.Rd</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRGVsZXRpbmcgcm93VG9Db2xOYW1lcy5SZFxuIn0= -->
+<pre><code>Deleting rowToColNames.Rd</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGV2dG9vbHM6OmxvYWRfYWxsKClcblxuYGBgIn0= -->
-<pre class="r"><code>devtools::load_all()
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5kZXZ0b29sczo6bG9hZF9hbGwoKVxuYGBgIn0= -->
+<pre class="r"><code>
+devtools::load_all()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyBwcm9zdHlSXG4ifQ== -->
-<pre><code>Loading prostyR</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiU2V0IHVwIG5ldyBwYWNrYWdlIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpgYGB7ciBsb2FkIGxpYnJhcmllc30KCmxpYnJhcnkodGVzdHRoYXQpCmxpYnJhcnkocm94eWdlbjIpCmxpYnJhcnkocGFja3JhdCkKbGlicmFyeShkZXZ0b29scykKbGlicmFyeSh1c2V0aGlzKQoKYGBgCgoKYGBge3Igcm94eWdlbmlzZX0KCnJveHlnZW4yOjpyb3h5Z2VuaXNlKCkKCgpgYGAKCmBgYHtyIHVzZSBwYWNrYWdlc30KCnVzZXRoaXM6OnVzZV9waXBlKCkgI3NldCB1cCBtYWdyaXR0ciAlPiUKdXNldGhpczo6dXNlX3BhY2thZ2UoJ3B1cnJyJykKdXNldGhpczo6dXNlX3BhY2thZ2UoJ3N0cmluZ3InKQp1c2V0aGlzOjp1c2VfcGFja2FnZSgnbWFncml0dHInKQp1c2V0aGlzOjp1c2VfcGFja2FnZSgnZHBseXInKQp1c2V0aGlzOjp1c2VfcGFja2FnZSgnZGJwbHlyJykKdXNldGhpczo6dXNlX3BhY2thZ2UoJ2NsaXByJykKdXNldGhpczo6dXNlX3BhY2thZ2UoJ3JsYW5nJykKdXNldGhpczo6dXNlX3BhY2thZ2UoJ3V0aWxzJykKCmBgYApJbiBvcmRlciB0byBydW4gdGhlIG5leHQgc3RlcCwgeW91ciBmdW5jdGlvbnMgc2hvdWxkIGJlIGRvY3VtZW50ZWQgd2l0aCB0aGUgc3BhY2luZy9kb2N1bWVudGF0aW9uIGxheW91dCB1c2VkIGluIHRoZSBmdW5jdGlvbiBzY3JpcHRzLiBlZwoKYGBge3J9CiMnIEZ1bmN0aW9uIHRvIHJldHVybiBpbnB1dAoKIycgQHBhcmFtIHggYW4gaW5wdXQKIycgQHJldHVybiB0aGUgaW5wdXQKIycKIycgQGV4cG9ydApteV9mdW5jIDwtIGZ1bmN0aW9uKHgpewoJcmV0dXJuKHgpCn0KYGBgCgpUaGlzIHdpbGwgd3JpdGUgZG9jdW1lbnRhdGlvbiBmb3IgYWxsIHlvdXIgZnVuY3MKYGBge3J9CgpkZXZ0b29sczo6ZG9jdW1lbnQoKQoKYGBgCmBgYHtyfQoKZGV2dG9vbHM6OmxvYWRfYWxsKCkKCmBgYAoKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiU2V0IHVwIG5ldyBwYWNrYWdlIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpgYGB7ciBsb2FkIGxpYnJhcmllc30KCmxpYnJhcnkodGVzdHRoYXQpCmxpYnJhcnkocm94eWdlbjIpCmxpYnJhcnkocGFja3JhdCkKbGlicmFyeShkZXZ0b29scykKbGlicmFyeSh1c2V0aGlzKQoKYGBgCgoKYGBge3Igcm94eWdlbmlzZX0KCnJveHlnZW4yOjpyb3h5Z2VuaXNlKCkKCgpgYGAKCmBgYHtyIHVzZSBwYWNrYWdlc30KCnVzZXRoaXM6OnVzZV9waXBlKCkgI3NldCB1cCBtYWdyaXR0ciAlPiUKdXNldGhpczo6dXNlX3BhY2thZ2UoJ3B1cnJyJykKdXNldGhpczo6dXNlX3BhY2thZ2UoJ3N0cmluZ3InKQp1c2V0aGlzOjp1c2VfcGFja2FnZSgnbWFncml0dHInKQp1c2V0aGlzOjp1c2VfcGFja2FnZSgnZHBseXInKQp1c2V0aGlzOjp1c2VfcGFja2FnZSgnZGJwbHlyJykKdXNldGhpczo6dXNlX3BhY2thZ2UoJ2NsaXByJykKdXNldGhpczo6dXNlX3BhY2thZ2UoJ3JsYW5nJykKdXNldGhpczo6dXNlX3BhY2thZ2UoJ3V0aWxzJykKdXNldGhpczo6dXNlX3BhY2thZ2UoJ2phbml0b3InKQoKYGBgCkluIG9yZGVyIHRvIHJ1biB0aGUgbmV4dCBzdGVwLCB5b3VyIGZ1bmN0aW9ucyBzaG91bGQgYmUgZG9jdW1lbnRlZCB3aXRoIHRoZSBzcGFjaW5nL2RvY3VtZW50YXRpb24gbGF5b3V0IHVzZWQgaW4gdGhlIGZ1bmN0aW9uIHNjcmlwdHMuIGVnCgpgYGB7cn0KIycgRnVuY3Rpb24gdG8gcmV0dXJuIGlucHV0CgojJyBAcGFyYW0geCBhbiBpbnB1dAojJyBAcmV0dXJuIHRoZSBpbnB1dAojJwojJyBAZXhwb3J0Cm15X2Z1bmMgPC0gZnVuY3Rpb24oeCl7CglyZXR1cm4oeCkKfQpgYGAKClRoaXMgd2lsbCB3cml0ZSBkb2N1bWVudGF0aW9uIGZvciBhbGwgeW91ciBmdW5jcwpgYGB7cn0KCmRldnRvb2xzOjpkb2N1bWVudCgpCgpgYGAKYGBge3J9CgpkZXZ0b29sczo6bG9hZF9hbGwoKQoKYGBgCgoK</div>
 
 
 

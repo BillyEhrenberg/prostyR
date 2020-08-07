@@ -32,6 +32,7 @@ usethis::use_package('dbplyr')
 usethis::use_package('clipr')
 usethis::use_package('rlang')
 usethis::use_package('utils')
+usethis::use_package('janitor')
 
 ```
 In order to run the next step, your functions should be documented with the spacing/documentation layout used in the function scripts. eg
