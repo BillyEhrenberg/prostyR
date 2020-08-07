@@ -1,10 +1,10 @@
-Package: packageTitle
-Title: Package Title 
+Package: prostyR
+Title: prostyR
 Version: 0.1.0
-Author: Data Science
-Maintainer: Data Science <data.science@ft.com>
-Description: The ftb2cltv package provides functions and models 
-    for forecasting B2C acquisitions, cancellations and calculating LTV.
+Author: Billy Ehrenberg-Shannon
+Maintainer: Data Science <billy.ehrenberg@ft.com>
+Description: The xxx package provides functions  
+    for xxx xxx xxx, xxx and xxx xxx.
 Depends: R (>= 2.10), 
     Rcpp
 License: file LICENSE
@@ -16,6 +16,14 @@ Suggests:
     testthat,
     roxygen2
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
 Imports: 
+    magrittr,
+    purrr,
+    stringr,
+    dplyr,
+    dbplyr,
+    clipr,
+    rlang,
+    utils
 VignetteBuilder: knitr

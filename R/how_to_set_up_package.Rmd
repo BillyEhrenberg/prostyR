@@ -1,0 +1,58 @@
+---
+title: "Set up new package"
+output: html_notebook
+---
+
+```{r load libraries}
+
+library(testthat)
+library(roxygen2)
+library(packrat)
+library(devtools)
+library(usethis)
+
+```
+
+
+```{r roxygenise}
+
+roxygen2::roxygenise()
+
+
+```
+
+```{r use packages}
+
+usethis::use_pipe() #set up magrittr %>%
+usethis::use_package('purrr')
+usethis::use_package('stringr')
+usethis::use_package('magrittr')
+usethis::use_package('dplyr')
+usethis::use_package('dbplyr')
+usethis::use_package('clipr')
+usethis::use_package('rlang')
+usethis::use_package('utils')
+
+```
+In order to run the next step, your functions should be documented with the spacing/documentation layout used in the function scripts. eg
+
+```{r}
+#' Function to return input
+
+#' @param x an input
+#' @return the input
+#'
+#' @export
+my_func <- function(x){
+	return(x)
+}
+```
+
+This will write documentation for all your funcs
+```{r}
+
+devtools::document()
+
+```
+
+
