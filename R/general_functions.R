@@ -27,9 +27,9 @@ pu <- function(df,...){
 #' Rounding function to round values of exactly n.5 up
 #'
 #' Function to round values of exactly n.5 up rather than round, which would round even numbers down and odd up:
-#' with round 1.5 and 2.5 woukld both give 2. round_half_up would return 2 and 3.
+#' with round 1.5 and 2.5 would both give 2. round_half_up would return 2 and 3.
 #'
-#' @dbl ... a numeric value
+#' @param dbl a numeric value
 #' @return a rounded numeric value
 #' @export
 round_half_up <- function(dbl){

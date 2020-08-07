@@ -6,10 +6,13 @@
 \usage{
 round_half_up(dbl)
 }
+\arguments{
+\item{dbl}{a numeric value}
+}
 \value{
 a rounded numeric value
 }
 \description{
 Function to round values of exactly n.5 up rather than round, which would round even numbers down and odd up:
-with round 1.5 and 2.5 woukld both give 2. round_half_up would return 2 and 3.
+with round 1.5 and 2.5 would both give 2. round_half_up would return 2 and 3.
 }
