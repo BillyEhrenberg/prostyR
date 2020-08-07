@@ -55,7 +55,7 @@ checkRVersion <- function(){
 		rvest::html_nodes('body > table:nth-child(9) > tr > td > a') %>% .[1]
 
 
-	version_url <- html_attr(version_node,'href') %>%
+	version_url <- rvest::html_attr(version_node,'href') %>%
 		paste0('https://cran.r-project.org/bin/macosx/',.)
 
 
