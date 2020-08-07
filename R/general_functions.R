@@ -33,5 +33,5 @@ pu <- function(df,...){
 #' @return a rounded numeric value
 #' @export
 round_half_up <- function(dbl){
-	if_else(val %% 1 == .5, ceiling(val), round(val))
+	if_else(dbl %% 1 == .5, ceiling(dbl), round(dbl))
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/query_functions.R
 \name{sql_copy}
 \alias{sql_copy}
-\title{Render and copy to clipboard a sql query}
+\title{Render and copy to clipboard an sql query}
 \usage{
 sql_copy(query)
 }

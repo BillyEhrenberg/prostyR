@@ -67,7 +67,7 @@ tbl_sample_n <- function(tbl, n, distinct_on = NULL, keep_all = T){
 }
 
 
-#' Render and copy to clipboard a sql query
+#' Render and copy to clipboard an sql query
 #'
 #' Function to render and copy to clipboard a sql query
 #'
