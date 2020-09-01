@@ -17,7 +17,9 @@ get_tbl_names <- function(tbl, pattern = NULL){
 
 	if(!is.null(pattern)){
 		res <- res %>%
-			str_get_matches(pattern)
+			str_get_matches(pattern) %>%
+			.[!grepl('^\\~',.)] %>%
+			unique
 	}
 
 	return(res)
