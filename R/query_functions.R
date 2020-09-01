@@ -12,6 +12,7 @@ get_tbl_names <- function (tbl, pattern = NULL)
 	res <- tbl$ops %>% unlist %>% .[grepl("vars", names(.))] %>%
 		as.character %>%
 		.[!grepl("^\\~", .)] %>%
+		.[!is.na(.)] %>%
 		unique
 
 	if (!is.null(pattern)) {
