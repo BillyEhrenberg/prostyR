@@ -15,7 +15,7 @@ lazy_names <- function(x){
 
 	if(length(grep("~",nms) > 0)){
 		nms <- nms[grep("~",nms)] %>%
-			str_remove("~")
+			gsub("~","",.)
 	}
 
 	return(nms)
