@@ -2,24 +2,24 @@
 #'
 #' Function to return a character vector containing all the names of a big query table filtered by pattern if specified
 #'
-#' @param tbl a BigQuery table
-#' @param pattern a string or regex pattern used to match the column names in tbl
-#' @return a character vector comprised of all column names OR if pattern is specified all column names that match pattern
+#' @param x a BigQuery table
+#' @return a character vector comprised of all column names
 #'
 #' @export
-get_tbl_names <- function (tbl, pattern = NULL)
-{
-	res <- tbl$ops %>% unlist %>% .[grepl("vars", names(.))] %>%
-		as.character %>%
-		.[!grepl("^\\~", .)] %>%
-		.[!is.na(.)] %>%
-		unique
+lazy_names <- function(x){
 
-	if (!is.null(pattern)) {
-		res <- res %>%
-			str_get_matches(pattern)
+	nms <- x %>%
+		unlist %>%
+		.[grepl("vars",names(.))] %>%
+		as.character()
+
+	if(length(grep("~",nms) > 0)){
+		nms <- nms[grep("~",nms)] %>%
+			str_remove("~")
 	}
-	return(res)
+
+	return(nms)
+
 }
 
 
