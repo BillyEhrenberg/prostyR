@@ -79,3 +79,27 @@ sql_copy <- function(query){
 		dbplyr::sql_render(.) %>%
 		clipr::write_clip(.)
 }
+
+#' load a table from the SQL location
+#'
+#' Function to load a table from the SQL location
+#'
+#' @param connection a BQ connection
+#' @return a lazy query
+#' @export
+source_bq_tbl2 <- function(connection, table_location){
+
+	lookup <- strsplit(table_location,"\\.") %>%
+		unlist %>%
+		purrr::set_names(c("dataset","schema","table")) %>%
+		as.list
+
+	out <- source_bq_tbl(connection,
+											 table = data$table,
+											 schema = data$schema,
+											 dataset = data$dataset)
+
+	return(out)
+
+
+}
